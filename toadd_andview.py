@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """Class: Task"""
 
+from datetime import datetime
+from time import time
 
 class Task:
-    def __init__(self, title, date, time):
+    def __init__(self, title):
         self.title = title
-        self.date = date
-        self.time = time
+        self.date = datetime.now()
+        self.time = time()
         self.status = False
 
     def add_to_list(self):
@@ -22,11 +24,11 @@ class Task:
 tasklist = []
 
 handle1 = input('Enter title: ')
-handle2 = input('Enter date: ')
-handle3 = input('Enter time: ')
+# handle2 = input('Enter date: ')
+# handle3 = input('Enter time: ')
 
 
-tas = Task(handle1, handle2, handle3)
+tas = Task(handle1)
 tasklist.append(tas)
 for task in tasklist:
     task.viewtasks()
