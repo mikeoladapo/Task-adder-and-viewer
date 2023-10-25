@@ -4,6 +4,7 @@
 from datetime import datetime
 from time import time
 
+
 class Task:
     def __init__(self, title):
         self.title = title
